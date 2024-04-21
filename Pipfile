@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "==3.0.1"
+flask-mail = "==0.9.1"
+flask-migrate = "==3.1.0"
+flask-sqlalchemy = "==3.1.1"
+paypalrestsdk = "==1.13.0"
+werkzeug = "==3.0.1"
+python-version = "==3.9"
+sanic = "==19.6.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
