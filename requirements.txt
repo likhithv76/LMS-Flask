@@ -3,5 +3,6 @@ Flask-Mail==0.9.1
 Flask-Migrate==3.1.0
 Flask-SQLAlchemy==3.1.1
 paypalrestsdk==1.13.0
-python_version==3.11.2
 Werkzeug==3.0.1
+python_version==3.9
+sanic==19.6.0
