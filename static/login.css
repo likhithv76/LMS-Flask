@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bungee+Spice&family=Foldit:wght@100..900&family=Gugi&family=Noto+Color+Emoji&family=Play:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+h1{
+    color:#3904cc
+}
+h3{
+  color: grey;
+}
+.flash-messages {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flash-messages li {
+  background-color: #f2dede; /* Light red background color */
+  color: #a94442; /* Dark red text color */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.flash-messages li.error {
+  background-color: #f8d7da; /* Lighter red background color for error messages */
+  color: #721c24; /* Darker red text color for error messages */
+}
+
+.flash-messages li.success {
+  background-color: #d4edda; /* Light green background color for success messages */
+  color: #155724; /* Dark green text color for success messages */
+}
+
+.flash-messages li.warning {
+  background-color: #fff3cd; /* Light yellow background color for warning messages */
+  color: #856404; /* Dark yellow text color for warning messages */
+}
+
+.stuLogin {
+    width: 50%;
+    margin: 10em auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 3em;
+    border-radius: 1em;
+    background-color: white;
+}
+
+input[type=email], input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #3904cc;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.txt {
+  float: right;
+  padding-top: 16px;
+}
+.spanTxt{
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseTera</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='courses.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-color: white;">
+    <div>
+        <nav>
+            <h1><a href="{{ url_for('index') }}">CourseTera</a></h1>
+            <input class="inputarea" type="text" id="searchInput" placeholder="Search for courses">
+            <button class="BuyButton" onclick="searchCourses()">Search</button>
+            <div id="searchResults"></div>
+            
+            <ul>
+                <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('student_login') }}">Student Login</a></li>
+                <li><a href="{{ url_for('teacher_login') }}">Teacher Login</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                <!-- <li><a href="">Blog</a></li> -->
+            </ul>
+        </nav>
+    </div>
+    <div class="container"> 
+        <h1 class="h1">Courses</h1>
+        {% if get_flashed_messages() %}
+            <div class="flash-messages">
+                <ul>
+                    {% for message in get_flashed_messages() %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% for course in courses %}    
+        <div class="cards">
+            <div>
+                <a href="{{ url_for('course_video', youtube_link=course.youtube_link, course=course.title) }}">
+                    <img src="{{ url_for('static', filename='img/' + course.image_url) }}" alt="">
+                </a>
+            </div>
+            <div class="cardDesc">
+                <h2>{{ course.title }}</h2> <!-- Change h1 to h2 here -->
+                <p>{{ course.description }}</p>
+                <a class="BuyButton" href="purchase"> &#8377 {{ course.price }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <script>
+        function searchCourses() {
+            var query = document.getElementById("searchInput").value.toLowerCase();
+            var courses = document.getElementsByClassName("cards");
+    
+            Array.from(courses).forEach(course => {
+                var title = course.querySelector("h2").textContent.toLowerCase();
+                var description = course.querySelector("p").textContent.toLowerCase();
+    
+                if (title.includes(query) || description.includes(query)) {
+                    course.style.display = "block";
+                } else {
+                    course.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

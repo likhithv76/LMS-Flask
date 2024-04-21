@@ -1,0 +1,4 @@
+-- database: c:\Users\hp\Desktop\LMS-system\instance\lms-system.db
+-- Use the ▷ button in the top right corner to run the entire file.
+
+

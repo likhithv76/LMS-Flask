@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bungee+Spice&family=Foldit:wght@100..900&family=Gugi&family=Noto+Color+Emoji&family=Play:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 100, 121, 1) 10%,
+    rgba(0, 28, 36, 1) 57%
+  );
+}
+.PurchaseDiv {
+  padding: 1em;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 3em auto;
+  align-items: center;
+}
+.PurchaseLeft {
+  width: 50%;
+  text-align: center;
+  padding: 1em;
+  background-color: white;
+  height: 28.5em;
+  box-shadow: 5px 5px 20px 5px black;
+}
+.PurchaseLeft table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.PurchaseLeft h1 {
+  color: #3904cc;
+}
+.PurchaseRight {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.PurchaseRight form {
+  width: 80%;
+  padding: 1em;
+  background-color: white;
+  box-shadow: 5px 5px 20px 5px black;
+}
+.PurchaseRight form h1 {
+  text-align: center;
+  color: #3904cc;
+  padding: 5px 0;
+}
+.PurchaseRight form input,
+select {
+  border-radius: 5px;
+  height: 2em;
+  margin-bottom: 1em;
+  border: none;
+  background-color: #c0c0c0;
+}
+.PurchaseRight form button {
+  padding: 1em;
+  color: white;
+  background-color: #3904cc;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.PurchaseRight form button:hover {
+  background-color: navy;
+}
+.Pcards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.courseDetails {
+  display: flex;
+  background: #3904cc;
+  color: white;
+  padding: 1em 0;
+  border-radius: 10px;
+  margin: 10px 0;
+  align-items: center;
+}
+.courseDetails p {
+  padding: 0 5px;
+}

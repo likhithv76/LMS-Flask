@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={{ url_for('static',filename="about.css")}} />
+    <link rel="stylesheet" href={{ url_for('static',filename="style.css")}}>
+    <title>Document</title>
+  </head>
+  <body>
+    <title>About</title>
+<div>
+    <nav>
+        <h1><a href="{{ url_for('index') }}">CourseTera</a></h1>
+        <ul>
+            <li><a  href="{{ url_for('index') }}">Home</a></li>
+            <li><a class="active" href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('student_login') }}">Student Login</a></li>
+            <li><a href="{{ url_for('teacher_login') }}">Teacher Login</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <!-- <li><a href="">Blog</a></li> -->
+        </ul>
+    </nav>
+</div> <br><br>
+    <div class="AboutDiv">
+      <h1>About Us</h1>
+      <div class="AboutImg">
+        <div class="_1img">
+          <img src={{url_for('static',filename='img/logo.png')}} alt="Rajesh" />
+        </div>
+        <div class="_2img">
+            <div>
+                <img src={{url_for('static',filename='img/lv.jpeg')}} alt="Likhith" />
+                <h1>Likhith V  </h1>
+                <p>Programmer</p>
+              </div>
+            <div >
+                <img src={{url_for('static',filename='img/RN.jpeg')}} alt="Rajesh" />
+                <h1>Rajesh N</h1>
+                <p>Programmer</p>
+              </div>
+          <div>
+            <img src={{url_for('static',filename='img/NBS.jpeg')}} alt="Nagraj" />
+            <h1>Nagraj BS</h1>
+            <p>Programmer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

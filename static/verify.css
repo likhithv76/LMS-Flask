@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bungee+Spice&family=Foldit:wght@100..900&family=Gugi&family=Noto+Color+Emoji&family=Play:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.Verify{
+    width: 30%;
+    margin: 10em auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 3em;
+    border-radius: 1em;
+    border: 2px solid blue;
+}
+
+.verifyForm{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1em 0;
+    justify-content: center;
+}
+.verifyForm input{
+    height: 2em;
+    border-radius: 10px;
+    width: 9em;
+    appearance: none;
+    padding: 0 1em;
+    letter-spacing: 1em;
+}
+.verifyForm button{
+    background-color: #3904cc;
+    color: white;
+    padding: 1em 0.5em;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+}
+.verifyForm button:hover{
+    background-color: navy;
+}

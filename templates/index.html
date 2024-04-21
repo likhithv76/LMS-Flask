@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{ url_for('static',filename="style.css")}}>
+    <title>CourseTera</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include "base.html" %}
+    <!-- Navbar Ends -->
+
+    <!-- Hero Section -->
+    <div class="heroSection">
+        <div class="HeroText">
+        <!-- <h1>Students Registered</h1> -->
+        {% if student_name %}
+        <h1 class="Greeting">Hi, <h1 class="UserName">{{student_name}}</h1></h1>
+        {% endif %}
+        <h1><b style="color: aqua;">CourseTera </b> offers a diverse range of online courses, providing users with accessible and interactive learning experiences tailored to their interests and goals.</h1>
+        <!-- <p id="numberScroller">0</p> -->
+        </div>
+        <div class="HeroImg">
+            <img src={{url_for('static',filename='img/logo.png')}} alt={{url_for('courses')}}>
+        </div>
+        
+
+    </div>
+    <!-- Hero Section Ends -->
+
+    <!-- Course Tag Section -->
+    <div class="courseTags">
+        <table>
+            <tr>
+                <td><button>Web Development</button></td>
+                <td><button>JavaScript</button></td>
+                <td><button>ReactJs</button></td>
+                <td><button>AngularJs</button></td>
+                <td><button>NodeJs</button></td>
+
+            </tr>
+            <tr>
+                <td><button>C programming</button></td>
+                <td><button>C++ program</button></td>
+                <td><button>Java</button></td>
+                <td><button>Python</button></td>
+                <td><button>DotNet</button></td>
+
+            </tr>
+            <tr>
+                <td><button>Android Development</button></td>
+                <td><button>ios Development</button></td>
+                <td><button>MERN Stack</button></td>
+                <td><button>Django</button></td>
+                <td><button>AngularJs</button></td>
+            </tr>
+        </table>
+    </div>
+    <!-- course Tag section Ends -->
+
+    <!-- Course Cards Section -->
+   
+    <div class="CourseCardsMain">
+        <div class="courseContainer">
+
+            <div class="courseCards">
+                <a href={{url_for('courses')}}>
+                    <img src="{{ url_for('static', filename='img/wd2.jpg') }}" alt={{url_for('courses')}}>
+                    <h3>Web Development</h3>
+                    <p>Author Data</p>
+                    <h3><b>Price: &#8377 1000</b></h3>
+                </a>
+            </div>
+
+
+            <div class="courseCards">
+                <a href={{url_for('courses')}}>
+                    <img src="{{ url_for('static', filename='img/wd3.jpg') }}" alt={{url_for('courses')}}>
+                    <h3>Python programing</h3>
+                    <p>Author Data</p>
+                    <h3><b>Price: &#8377 1999</b></h3>
+                </a>
+            </div>
+
+
+            <div class="courseCards">
+                <a href={{url_for('courses')}}>
+                    <img src="{{ url_for('static', filename='img/wd2.jpg') }}" alt={{url_for('courses')}}>
+                    <h3>JAVA programing</h3>
+                    <p>Author Data</p>
+                    <h3><b>Price: &#8377 2999</b></h3>
+                </a>
+            </div>
+
+            <div class="courseCards">
+                <a href={{url_for('courses')}}>
+                    <img src="{{ url_for('static', filename='img/wd.jpg') }}" alt={{url_for('courses')}}>
+                    <h3>MERN stack</h3>
+                    <p>Author Data</p>
+                    <h3><b>Price: &#8377 3999</b></h3>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <div class="TrustCompanies">
+<h2 style="color: black; padding-bottom: 1em;">Trusted by over 2 companies and thousands of learners around the world</h2>
+<div class="TCompanies" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <!-- <img src="/static/Images/pacewisdom .png" alt={{url_for('courses')}}>
+    <h1>SWAPNODAYA</h1> -->
+    <h1>SWAPNODAYA ,</h1>
+    <h1>PACEWISDOM</h1>
+</div>
+    </div>
+    <div class="footerDiv">
+        <footer>
+            <div class="FooterImg">
+                <img src={{url_for('static',filename='img/logo.png')}} alt={{url_for('courses')}}>
+            </div>
+            <div class="FooterTxt">
+                <h1 style="color: #3904cc;">CourseTera</h1>
+                <a href={{url_for('about')}}><p>About Us</p></a>
+                <a href={{url_for('about')}}><p>Contact Us</p></a>
+                <a href={{url_for('courses')}}><p>Help and Support</p></a>
+                <a href={{url_for('courses')}}><p>Terms</p></a>
+                <a href={{url_for('courses')}}><p>Privacy Policy</p></a>
+                <p style="margin-top: 2em;">&copy 2024 CourseTera, Inc.</p>
+            </div>
+        </footer>
+
+    </div>
+    </div>
+</body>
+
+<script>
+    const numberScroller = document.getElementById("numberScroller");
+
+let currentNumber = 0;
+const targetNumber = 100;
+const duration = 3000;
+const interval = 10;
+const increment = targetNumber / (duration / interval);
+
+function scrollNumber() {
+    if (currentNumber < targetNumber) {
+        currentNumber += increment;
+        if (currentNumber > targetNumber) {
+            currentNumber = targetNumber;
+        }
+        numberScroller.textContent = Math.floor(currentNumber);
+        setTimeout(scrollNumber, interval);
+    }
+}
+
+scrollNumber();
+</script>
+
+</html>

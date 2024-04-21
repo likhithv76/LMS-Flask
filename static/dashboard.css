@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bungee+Spice&family=Foldit:wght@100..900&family=Gugi&family=Noto+Color+Emoji&family=Play:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    box-sizing: border-box;
+}
+/* Teacher Dashboard Banner styles */
+.TeacherDashContent{
+    display:flex;
+flex-direction: column;
+justify-content: center;
+margin: 0 auto;
+text-align: center;
+}
+h1 {
+    background-color:#3904cc;
+    padding: 30px;
+    color: white;
+}
+.h2{
+    padding-top: 6em;
+    color: #3904cc;
+}
+.table h2{
+    padding-top: 2em;
+    color: #3904cc;
+}
+/* nav Button */
+.navButton{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 1em;
+    gap: 1em;
+    background-color: #3904cc;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+    overflow: hidden;
+    top: 0%;
+    width: 100%;
+}
+.navButton button{
+    padding: 1em 2em;
+    color: white;
+    background-color: navy;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.navButton button:hover{
+    background-color: blue;
+}
+/* Table styles */
+.table{
+    padding:7em 5em;
+}
+.table table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+ .table th{
+    text-align: center;
+    color: navy;
+    font-size: 25px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+.buttonTd{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.buttonTd button{
+    width: 6em;
+    padding: 0.5em 0;
+    color: white;
+    border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+.buttonTd button:hover{
+    opacity: 0.8;
+    color: black;
+}
+.addBtn {
+    width: 6em;
+    padding: 0.5em 0;
+    color: white;
+    background-color: green;
+    border: none;
+border-radius: 10px;
+cursor: pointer; 
+}
+.addBtn:hover{
+    opacity: 0.8;
+    color: black;
+}
+
+/* Course Popup */
+#Course-List {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.container {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.tablePop {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tablePop th {
+    text-align: center;
+    color: navy;
+    font-size: 25px;
+    padding: 1em;
+}
+
+
+
+/* update */
+.p{
+    color: #3904cc;
+    font-size: 40px;
+    padding-bottom: 1em;
+}
+
+.CourseForm{
+    width: 40%;
+    border: 2px solid #3904cc;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.CourseForm input{
+height: 3em;
+border: 2px solid #3904cc;
+border-radius: 10PX;
+}
+.CourseForm button{
+    padding: 1em;
+    color: white;
+    background-color: #3904cc;
+    border: none;
+    border-radius: 10px;
+}
+.CourseForm button:hover{
+    background-color: navy;
+}
+
+
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.total-students {
+    margin-top: 20px;
+}
+
+.student-count {
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #007bff; /* Example color */
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Adjust the maximum width as needed */
+    margin: auto;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
