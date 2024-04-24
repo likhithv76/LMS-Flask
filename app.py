@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request,flash,redirect,url_for,session,flash,jsonify
 from flask_sqlalchemy import  SQLAlchemy
 from datetime import datetime,timedelta,timezone
+from flask_cors import CORS
 import smtplib
 from email.mime.text import MIMEText
 import random
@@ -13,6 +14,7 @@ import paypalrestsdk
 
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lms-system.db'
 db= SQLAlchemy(app)
